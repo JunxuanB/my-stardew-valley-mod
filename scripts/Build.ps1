@@ -15,6 +15,9 @@ $packageFolder = Join-Path $stage 'Welcome'
 New-Item -ItemType Directory -Force -Path $packageFolder | Out-Null
 Copy-Item -LiteralPath "$script:ProjectRoot\Welcome\bin\Release\net6.0\Welcome.dll" -Destination $packageFolder
 Copy-Item -LiteralPath "$script:ProjectRoot\Welcome\manifest.json" -Destination $packageFolder
+$workerFolder = Join-Path $packageFolder 'update'
+New-Item -ItemType Directory -Path $workerFolder | Out-Null
+Copy-Item -LiteralPath "$PSScriptRoot\Common.ps1","$PSScriptRoot\Apply-AfterExit.ps1" -Destination $workerFolder
 $zip = Join-Path $script:ProjectRoot "artifacts\Welcome-$version.zip"
 Compress-Archive -LiteralPath $packageFolder -DestinationPath $zip -Force
 $hash = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()

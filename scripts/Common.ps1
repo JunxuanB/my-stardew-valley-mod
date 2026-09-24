@@ -1,5 +1,10 @@
 ﻿Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+# A detached Windows PowerShell process can inherit PowerShell 7's module path.
+# Prefer the modules belonging to the runtime which is actually executing us.
+$builtInModules = "$PSHOME\Modules"
+$otherModules = @($env:PSModulePath -split ';' | Where-Object { $_ -ne $builtInModules })
+$env:PSModulePath = (@($builtInModules) + $otherModules) -join ';'
 $script:ProjectRoot = Split-Path $PSScriptRoot -Parent
 $script:ModFolder = 'Welcome'
 $script:ModId = 'JunxuanB.Welcome'
@@ -25,11 +30,11 @@ function Get-ModVersion([string] $Value) {
     return [version] $Value
 }
 
-function Install-ModPackage([string] $PackagePath, [string] $GamePath, [string] $ExpectedVersion) {
+function Install-ModPackage([string] $PackagePath, [string] $GamePath, [string] $ExpectedVersion, [string] $TargetDirectory) {
     Assert-GameStopped
-    $modsPath = Join-Path ([IO.Path]::GetFullPath($GamePath)) 'Mods'
+    $destination = if ($TargetDirectory) { [IO.Path]::GetFullPath($TargetDirectory) } else { Join-Path ([IO.Path]::GetFullPath($GamePath)) 'Mods\Welcome' }
+    $modsPath = [IO.Path]::GetDirectoryName($destination)
     New-Item -ItemType Directory -Path $modsPath -Force | Out-Null
-    $destination = Join-Path $modsPath $script:ModFolder
     $staging = Join-Path $modsPath ('.welcome-update-' + [guid]::NewGuid().ToString('N'))
     $backup = Join-Path $modsPath ('.welcome-backup-' + [guid]::NewGuid().ToString('N'))
     New-Item -ItemType Directory -Path $staging | Out-Null

@@ -10,6 +10,7 @@ public sealed class ModEntry : Mod
 {
     // Each split-screen player has their own pending message.
     private readonly PerScreen<bool> pendingWelcome = new();
+    private string? updateNotice;
 
     public override void Entry(IModHelper helper)
     {
@@ -17,6 +18,12 @@ public sealed class ModEntry : Mod
         helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
         helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
         helper.Events.GameLoop.ReturnedToTitle += (_, _) => pendingWelcome.Value = false;
+        helper.Events.GameLoop.GameLaunched += (_, _) =>
+        {
+            var updater = new AutoUpdater(helper.DirectoryPath, ModManifest.Version.ToString(), Monitor,
+                message => Interlocked.Exchange(ref updateNotice, message));
+            _ = Task.Run(updater.RunAsync);
+        };
     }
 
     private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
@@ -27,6 +34,9 @@ public sealed class ModEntry : Mod
 
     private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
     {
+        if (Context.IsPlayerFree && !Game1.fadeToBlack && Interlocked.Exchange(ref updateNotice, null) is { } notice)
+            Game1.addHUDMessage(new HUDMessage(notice, HUDMessage.newQuest_type));
+
         // Wait until loading fades and introductory events have finished.
         if (!pendingWelcome.Value || !Context.IsPlayerFree || Game1.fadeToBlack)
             return;

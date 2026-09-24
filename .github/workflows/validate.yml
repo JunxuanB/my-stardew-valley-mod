@@ -26,3 +26,6 @@ jobs:
       - name: Test package installation (Windows PowerShell)
         shell: powershell
         run: ./tests/Package.Tests.ps1
+      - name: Test detached updater and exit lifecycle
+        shell: pwsh
+        run: ./tests/ExitUpdater.Tests.ps1

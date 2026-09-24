@@ -33,9 +33,10 @@ Welcome $version
 
 每次进入存档或加入联机时显示「欢迎！」。每位联机玩家均需安装 SMAPI 和本模组。
 
-首次安装：下载 Welcome-$version.zip，解压其中的 Welcome 文件夹到游戏 Mods 目录。
-自动更新：下载本仓库源码 ZIP，解压后双击 Start-Game.cmd（非默认游戏路径请参考 README）。
-之后启动器会在启动游戏前检查最新 Release，校验 SHA256 并安装更新。
+首次安装：关闭游戏，下载 Welcome-$version.zip，将完整 Welcome 文件夹（含 update 子目录）解压到游戏 Mods 目录。
+继续使用原来的 Steam/SMAPI 启动方式，无需新增启动器或修改启动参数。
+Windows 内置自动更新：后台检查并下载新版，校验 SHA256，退出游戏后自动安装，下次正常启动生效。
+0.1.x 用户需先覆盖安装一次本版本，之后即可内置自动更新。
 "@ | Set-Content -LiteralPath $notes -Encoding UTF8
     & $gh release create $tag $zip "$zip.sha256" --repo $script:Repository --verify-tag --title "Welcome $version" --notes-file $notes
     if ($LASTEXITCODE -ne 0) { throw 'Release creation failed. Existing releases are never overwritten; inspect GitHub before retrying.' }
