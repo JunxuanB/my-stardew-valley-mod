@@ -13,6 +13,7 @@ public sealed class ModEntry : Mod
 
     public override void Entry(IModHelper helper)
     {
+        Monitor.Log($"Welcome {ModManifest.Version} initialized.", LogLevel.Info);
         helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
         helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
         helper.Events.GameLoop.ReturnedToTitle += (_, _) => pendingWelcome.Value = false;
