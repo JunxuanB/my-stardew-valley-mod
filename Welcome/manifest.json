@@ -1,0 +1,10 @@
+{
+  "Name": "Welcome",
+  "Author": "JunxuanB",
+  "Version": "0.1.0",
+  "Description": "每次进入存档或加入联机时，向当前玩家显示欢迎提示。",
+  "UniqueID": "JunxuanB.Welcome",
+  "EntryDll": "Welcome.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": ["GitHub:JunxuanB/my-stardew-valley-mod"]
+}

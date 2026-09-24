@@ -1,0 +1,28 @@
+name: Validate
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate PowerShell syntax and manifest
+        shell: pwsh
+        run: |
+          Get-ChildItem -Recurse -Filter *.ps1 | ForEach-Object {
+            $tokens = $null; $errors = $null
+            $null = [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors)
+            if ($errors) { throw ($errors | Out-String) }
+          }
+          $manifest = Get-Content Welcome/manifest.json -Raw | ConvertFrom-Json
+          if ($manifest.Version -notmatch '^\d+\.\d+\.\d+$') { throw 'Invalid stable version' }
+          if ($manifest.UniqueID -ne 'JunxuanB.Welcome') { throw 'Invalid mod identity' }
+      - name: Test package installation (PowerShell 7)
+        shell: pwsh
+        run: ./tests/Package.Tests.ps1
+      - name: Test package installation (Windows PowerShell)
+        shell: powershell
+        run: ./tests/Package.Tests.ps1
