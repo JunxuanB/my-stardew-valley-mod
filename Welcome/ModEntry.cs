@@ -42,7 +42,7 @@ public sealed class ModEntry : Mod
             return;
 
         pendingWelcome.Value = false;
-        Game1.addHUDMessage(new HUDMessage("欢迎！", HUDMessage.newQuest_type));
+        Game1.addHUDMessage(new HUDMessage("外星人占领新露谷！", HUDMessage.newQuest_type));
         Monitor.Log($"Welcome shown for player {Game1.player.UniqueMultiplayerID} on screen {Context.ScreenId}.", LogLevel.Info);
     }
 }
