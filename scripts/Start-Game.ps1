@@ -16,7 +16,7 @@ if (!$SkipUpdate) {
         $latest = Get-ModVersion $version
         $current = [version] '0.0.0'
         if (Test-Path -LiteralPath $installedManifest) {
-            $local = Get-Content -LiteralPath $installedManifest -Raw | ConvertFrom-Json
+            $local = Get-Content -LiteralPath $installedManifest -Raw -Encoding UTF8 | ConvertFrom-Json
             if ($local.UniqueID -ne $script:ModId) { throw 'Installed mod identity mismatch.' }
             $current = Get-ModVersion $local.Version
         }

@@ -7,7 +7,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Run gh auth login first.' }
     $changes = git status --porcelain
     if ($LASTEXITCODE -ne 0 -or $changes) { throw 'Commit all changes before publishing.' }
-    $manifest = Get-Content -LiteralPath 'Welcome\manifest.json' -Raw | ConvertFrom-Json
+    $manifest = Get-Content -LiteralPath 'Welcome\manifest.json' -Raw -Encoding UTF8 | ConvertFrom-Json
     $version = $manifest.Version
     $null = Get-ModVersion $version
     $tag = "v$version"

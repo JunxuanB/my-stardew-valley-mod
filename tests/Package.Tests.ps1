@@ -7,7 +7,10 @@ function New-Fixture([string] $Version, [string] $Id = 'JunxuanB.Welcome') {
     $folder = Join-Path $testRoot ([guid]::NewGuid().ToString('N'))
     $mod = Join-Path $folder 'Welcome'
     New-Item -ItemType Directory -Path $mod -Force | Out-Null
-    @{ UniqueID = $Id; Version = $Version; EntryDll = 'Welcome.dll' } | ConvertTo-Json | Set-Content (Join-Path $mod 'manifest.json')
+    # Write BOM-less UTF-8, matching a manifest created by a normal code editor.
+    $description = -join ([char[]] @(0x6B22, 0x8FCE, 0xFF01))
+    $json = @{ UniqueID = $Id; Version = $Version; EntryDll = 'Welcome.dll'; Description = $description } | ConvertTo-Json
+    [IO.File]::WriteAllText((Join-Path $mod 'manifest.json'), $json, [Text.UTF8Encoding]::new($false))
     Set-Content (Join-Path $mod 'Welcome.dll') "fixture-$Version"
     $zip = "$folder.zip"
     Compress-Archive -LiteralPath $mod -DestinationPath $zip
@@ -17,7 +20,7 @@ function Assert-Rejected([scriptblock] $Action) {
     $rejected = $false
     try { & $Action } catch { $rejected = $true }
     Assert $rejected 'Unsafe package was accepted.'
-    $installed = Get-Content (Join-Path $testRoot 'game\Mods\Welcome\manifest.json') -Raw | ConvertFrom-Json
+    $installed = Get-Content (Join-Path $testRoot 'game\Mods\Welcome\manifest.json') -Raw -Encoding UTF8 | ConvertFrom-Json
     Assert ($installed.Version -eq '0.2.0') 'A rejected update changed the installed version.'
 }
 try {

@@ -4,7 +4,7 @@
 )
 . "$PSScriptRoot\Common.ps1"
 if (!(Test-Path -LiteralPath (Join-Path $GamePath 'StardewModdingAPI.dll'))) { throw 'Install SMAPI in GamePath first.' }
-$manifest = Get-Content -LiteralPath "$script:ProjectRoot\Welcome\manifest.json" -Raw | ConvertFrom-Json
+$manifest = Get-Content -LiteralPath "$script:ProjectRoot\Welcome\manifest.json" -Raw -Encoding UTF8 | ConvertFrom-Json
 $version = $manifest.Version
 $null = Get-ModVersion $version
 $dotnet = Find-DevTool 'dotnet'

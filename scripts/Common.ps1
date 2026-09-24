@@ -47,13 +47,13 @@ function Install-ModPackage([string] $PackagePath, [string] $GamePath, [string] 
         } finally { $archive.Dispose() }
         Expand-Archive -LiteralPath $PackagePath -DestinationPath $staging
         $incoming = Join-Path $staging $script:ModFolder
-        $manifest = Get-Content -LiteralPath (Join-Path $incoming 'manifest.json') -Raw | ConvertFrom-Json
+        $manifest = Get-Content -LiteralPath (Join-Path $incoming 'manifest.json') -Raw -Encoding UTF8 | ConvertFrom-Json
         if ($manifest.UniqueID -ne $script:ModId -or $manifest.EntryDll -ne 'Welcome.dll' -or
             $manifest.Version -ne $ExpectedVersion -or !(Test-Path -LiteralPath (Join-Path $incoming 'Welcome.dll'))) {
             throw 'Package identity, version or DLL validation failed.'
         }
         if (Test-Path -LiteralPath $destination) {
-            $existing = Get-Content -LiteralPath (Join-Path $destination 'manifest.json') -Raw | ConvertFrom-Json
+            $existing = Get-Content -LiteralPath (Join-Path $destination 'manifest.json') -Raw -Encoding UTF8 | ConvertFrom-Json
             if ($existing.UniqueID -ne $script:ModId) { throw 'The target folder belongs to another mod.' }
             $config = Join-Path $destination 'config.json'
             if (Test-Path -LiteralPath $config) { Copy-Item -LiteralPath $config -Destination $incoming -Force }
