@@ -8,52 +8,47 @@ using StardewModdingAPI;
 
 namespace Welcome;
 
-/// <summary>Downloads in the background; an independent worker installs after the game exits.</summary>
+/// <summary>Checks once during SMAPI entry; an independent worker installs after the game exits.</summary>
 internal sealed class AutoUpdater
 {
     private const string Repository = "JunxuanB/my-stardew-valley-mod";
     private readonly string modDirectory;
     private readonly Version installedVersion;
     private readonly IMonitor monitor;
-    private readonly Action<string> notify;
 
-    public AutoUpdater(string modDirectory, string installedVersion, IMonitor monitor, Action<string> notify)
+    public AutoUpdater(string modDirectory, string installedVersion, IMonitor monitor)
     {
         this.modDirectory = Path.GetFullPath(modDirectory);
         this.installedVersion = Version.Parse(installedVersion);
         this.monitor = monitor;
-        this.notify = notify;
     }
 
-    public async Task RunAsync()
+    /// <returns>True only when a verified update has a ready installation worker.</returns>
+    public async Task<bool> RunAsync()
     {
         if (!OperatingSystem.IsWindows())
         {
             monitor.Log("Automatic installation currently supports Windows only.", LogLevel.Info);
-            return;
+            return false;
         }
 
         using var client = new HttpClient { Timeout = TimeSpan.FromSeconds(90) };
         client.DefaultRequestHeaders.UserAgent.ParseAdd("JunxuanB-Welcome-AutoUpdater/1.0");
-        while (true)
+        try
         {
-            try
-            {
-                if (await StageUpdateAsync(client))
-                    return; // One worker per running game; it will wait for a normal exit.
-            }
-            catch (Exception ex)
-            {
-                monitor.Log($"Update check/download failed; keeping the current version. {ex.Message}", LogLevel.Warn);
-            }
-
-            await Task.Delay(TimeSpan.FromMinutes(15));
+            return await StageUpdateAsync(client);
+        }
+        catch (Exception ex)
+        {
+            monitor.Log($"Update check/download failed; continuing with the current version. {ex.Message}", LogLevel.Warn);
+            return false;
         }
     }
 
     private async Task<bool> StageUpdateAsync(HttpClient client)
     {
-        using var release = JsonDocument.Parse(await client.GetStringAsync($"https://api.github.com/repos/{Repository}/releases/latest"));
+        using var checkTimeout = new CancellationTokenSource(TimeSpan.FromSeconds(15));
+        using var release = JsonDocument.Parse(await client.GetStringAsync($"https://api.github.com/repos/{Repository}/releases/latest", checkTimeout.Token));
         JsonElement root = release.RootElement;
         if (root.GetProperty("draft").GetBoolean() || root.GetProperty("prerelease").GetBoolean())
             return false;
@@ -61,6 +56,11 @@ internal sealed class AutoUpdater
         string version = root.GetProperty("tag_name").GetString()!.TrimStart('v');
         if (!Regex.IsMatch(version, @"^\d+\.\d+\.\d+$") || Version.Parse(version) <= installedVersion)
             return false;
+
+        monitor.Log($"发现新版 {version}，正在下载并校验；准备完成后将结束本次启动，请稍候。", LogLevel.Warn);
+        // Bound streaming reads too: HttpClient.Timeout alone only covers headers with ResponseHeadersRead.
+        using var downloadTimeout = new CancellationTokenSource(TimeSpan.FromSeconds(90));
+        CancellationToken downloadToken = downloadTimeout.Token;
 
         string zipName = $"Welcome-{version}.zip";
         string zipUrl = FindAsset(root, zipName);
@@ -71,24 +71,24 @@ internal sealed class AutoUpdater
         string zipPath = Path.Combine(cache, zipName);
 
         // A failed download never touches the installed mod.
-        using (var response = await client.GetAsync(zipUrl, HttpCompletionOption.ResponseHeadersRead))
+        using (var response = await client.GetAsync(zipUrl, HttpCompletionOption.ResponseHeadersRead, downloadToken))
         {
             response.EnsureSuccessStatusCode();
-            using var input = await response.Content.ReadAsStreamAsync();
+            using var input = await response.Content.ReadAsStreamAsync(downloadToken);
             using var output = File.Create(zipPath);
             byte[] buffer = new byte[81920];
             long total = 0;
             int count;
-            while ((count = await input.ReadAsync(buffer.AsMemory())) != 0)
+            while ((count = await input.ReadAsync(buffer.AsMemory(), downloadToken)) != 0)
             {
                 total += count;
                 if (total > 64 * 1024 * 1024)
                     throw new InvalidDataException("Update package exceeds 64 MB.");
-                await output.WriteAsync(buffer.AsMemory(0, count));
+                await output.WriteAsync(buffer.AsMemory(0, count), downloadToken);
             }
         }
 
-        string expectedHash = (await client.GetStringAsync(hashUrl)).Trim().Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries)[0];
+        string expectedHash = (await client.GetStringAsync(hashUrl, downloadToken)).Trim().Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries)[0];
         using (var sha = SHA256.Create())
         using (var file = File.OpenRead(zipPath))
         {
@@ -148,7 +148,6 @@ internal sealed class AutoUpdater
             throw new IOException($"Update worker did not become ready. See {cache}");
 
         monitor.Log($"Update {installedVersion} -> {version} downloaded and verified. It will install after game exit. Status: {cache}", LogLevel.Info);
-        notify($"新版 {version} 已下载，退出游戏后自动安装，下次启动生效。");
         return true;
     }
 

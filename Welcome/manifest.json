@@ -1,7 +1,7 @@
 {
   "Name": "Welcome",
   "Author": "JunxuanB",
-  "Version": "0.2.2",
+  "Version": "0.3.0",
   "Description": "每次进入存档或加入联机时，向当前玩家显示欢迎提示。",
   "UniqueID": "JunxuanB.Welcome",
   "EntryDll": "Welcome.dll",

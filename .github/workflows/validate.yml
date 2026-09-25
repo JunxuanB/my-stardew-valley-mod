@@ -9,6 +9,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Test startup termination in an isolated child process
+        shell: pwsh
+        run: ./tests/StartupGate.Tests.ps1
       - name: Validate PowerShell syntax and manifest
         shell: pwsh
         run: |
