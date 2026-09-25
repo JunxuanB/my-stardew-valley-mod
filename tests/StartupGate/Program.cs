@@ -83,7 +83,11 @@ namespace StardewValley
         public const int newQuest_type = 0;
         public HUDMessage(string message, int type) { }
     }
-    public sealed class TestPlayer { public long UniqueMultiplayerID => 1; }
+    public sealed class TestPlayer
+    {
+        public long UniqueMultiplayerID => 1;
+        public string Name => "测试玩家";
+    }
     public static class Game1
     {
         public static bool fadeToBlack => false;
