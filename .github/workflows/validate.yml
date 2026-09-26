@@ -29,6 +29,12 @@ jobs:
       - name: Test package installation (PowerShell 7)
         shell: pwsh
         run: ./tests/Package.Tests.ps1
+      - name: Check future archive compatibility with the 1.0.0 updater (PowerShell 7)
+        shell: pwsh
+        run: ./tests/UpdateArchive.Tests.ps1
+      - name: Check future archive compatibility with the 1.0.0 updater (Windows PowerShell)
+        shell: powershell
+        run: ./tests/UpdateArchive.Tests.ps1
       - name: Test package installation (Windows PowerShell)
         shell: powershell
         run: ./tests/Package.Tests.ps1

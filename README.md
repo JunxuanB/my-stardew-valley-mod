@@ -3,9 +3,9 @@
 星露谷物语 SMAPI 模组。每位玩家每次进入存档（含新建存档）或加入联机后，在可以操作角色时显示 **玩家名你来星露谷有什么目的！**。玩家名使用当前角色的名字，联机和分屏玩家分别显示自己的名字。
 睡觉进入下一天不会重复；退出到标题再进入、联机断开重连会重新提示。分屏玩家分别处理。
 
-## 1.0.0
+## 1.0.1
 
-正式版包含纪念日玩法与奖励，保留欢迎提示和启动自动更新。下载见 [GitHub Release](https://github.com/JunxuanB/my-stardew-valley-mod/releases/tag/v1.0.0)，发布更新日志见 [1.0.0](docs/releases/1.0.0.md)。以下版本记录保留此前的实施与手动验收说明。
+修复非春季进入纪念日时临时地图缺少原版 `Town` 图块表、事件中断并跳到夜晚的问题；同时修复 1.0.0 自动更新器无法读取部分 Windows ZIP 路径的问题。下载见 [GitHub Release](https://github.com/JunxuanB/my-stardew-valley-mod/releases/tag/v1.0.1)，发布更新日志见 [1.0.1](docs/releases/1.0.1.md)。完整纪念日玩法、奖励、欢迎提示和启动自动更新保持不变。
 
 0.6.8 将克林特移到右上气球下方，加入原版铁砧并持续播放原版打铁动作，靠近时也能看到。皮埃尔与艾米丽固定朝前、只打开商店，不参与调查；节日小外固定正面背包站姿。史莱姆比赛在接受邀请后，把双方传送到广场对称起点一次，再练习和比赛。详见 [本轮说明](docs/FIXES-0.6.8.md)。
 
@@ -63,7 +63,7 @@
 
 ### 一台电脑双开及手动 QA
 
-1. 关闭全部游戏窗口，双击 `Launch-AnniversaryQA.cmd`，会从 `artifacts/Welcome-1.0.0.zip` 刷新隔离的房主/客机目录并启动房主。双方均更新到 1.0.0。
+1. 关闭全部游戏窗口，双击 `Launch-AnniversaryQA.cmd`，会从 `artifacts/Welcome-1.0.1.zip` 刷新隔离的房主/客机目录并启动房主。双方均更新到 1.0.1。
 2. 主持农场名以 `AnniversaryQA` 开头、带至少一间小屋的测试存档。
 3. 进入农场后再次双击启动器；客机选择合作/加入局域网，输入 **127.0.0.1**。
 4. 两边关闭“失去焦点时暂停”，用 Alt+Tab 切换。两名玩家到齐后按 **F8 → 召集全员进入纪念日**。
@@ -134,6 +134,7 @@ git commit -m "Prepare next release"
 
 发布命令完成本地编译、推送源码和 `v版本号` 标签、创建 Release、上传 ZIP 和 SHA256。**普通 git push 只更新源码；玩家自动更新以正式 Release 为准。**
 若存在 `docs/releases/版本号.md`，发布脚本使用该文件作为 Release 更新日志。
+后续发布包由 `scripts/New-ModPackage.ps1` 写入标准正斜杠 ZIP 路径，并用 .NET 精确查找 `Welcome/manifest.json`，兼容已安装的 1.0.0 更新器。`tests/UpdateArchive.Tests.ps1` 在 Windows PowerShell 与 PowerShell 7 下检查该兼容性；保留已发布的 1.0.0 原包。
 发布失败需检查远端状态再重试；脚本不会覆盖已有 Release 或改写已发布标签。
 GitHub Actions 在每次推送运行脚本与安装器测试；C# 构建使用本机游戏引用，游戏版权文件不入库。
 

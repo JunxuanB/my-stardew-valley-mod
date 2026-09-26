@@ -15,7 +15,7 @@ internal sealed class FestivalMapBuilder(IModHelper helper, FestivalLayout layou
     internal Map Build()
     {
         Map town = helper.GameContent.Load<Map>("Maps/Town");
-        var map = new Map();
+        var map = new Map(town.Id);
         foreach (var property in town.Properties)
             map.Properties[property.Key] = property.Value;
         foreach (string property in new[] { "Warp", "Doors", "DayTiles", "NightTiles", "EntryAction", "OnWarp", "Music" })
@@ -26,6 +26,10 @@ internal sealed class FestivalMapBuilder(IModHelper helper, FestivalLayout layou
         map.Properties[Marker] = "true";
         map.Properties["Outdoors"] = "T";
         map.Properties["indoorWater"] = "T";
+        // Town seasonal updates address the vanilla sheets by ID, so preserve
+        // those IDs before cloning any tiles into the festival map.
+        foreach (TileSheet original in town.TileSheets)
+            map.AddTileSheet(CloneSheet(original, map, original.Id));
         if(map.Properties.TryGetValue("Light",out var lights))
         {
             string[] parts=lights.ToString().Split(' ',StringSplitOptions.RemoveEmptyEntries);
@@ -88,6 +92,8 @@ internal sealed class FestivalMapBuilder(IModHelper helper, FestivalLayout layou
             Layer back = map.GetLayer("Back");
             map.AddLayer(new Layer("Set-Up", map, back.LayerSize, back.TileSize));
         }
+        if (map.GetTileSheet("Town") is null)
+            throw new InvalidOperationException("Anniversary map must preserve the vanilla 'Town' tile sheet ID.");
         map.LoadTileSheets(Game1.mapDisplayDevice);
         return map;
     }
@@ -100,13 +106,19 @@ internal sealed class FestivalMapBuilder(IModHelper helper, FestivalLayout layou
         // Map IDs aren't unique across sources: match the image, not a reused sheet ID.
         TileSheet? existing = map.TileSheets.FirstOrDefault(s => s.ImageSource == original.ImageSource);
         if (existing is not null) return existing;
-        var sheet = new TileSheet("z_anniversary_" + map.TileSheets.Count, map, original.ImageSource, original.SheetSize, original.TileSize)
+        TileSheet sheet = CloneSheet(original, map, "z_anniversary_" + map.TileSheets.Count);
+        map.AddTileSheet(sheet);
+        return sheet;
+    }
+
+    private static TileSheet CloneSheet(TileSheet original, Map map, string id)
+    {
+        var sheet = new TileSheet(id, map, original.ImageSource, original.SheetSize, original.TileSize)
         { Margin = original.Margin, Spacing = original.Spacing };
         foreach (var p in original.Properties) sheet.Properties[p.Key] = p.Value;
         for (int i = 0; i < original.TileCount; i++)
         foreach (var p in original.TileIndexProperties[i])
             if (p.Key is not "Action" and not "TouchAction") sheet.TileIndexProperties[i][p.Key] = p.Value;
-        map.AddTileSheet(sheet);
         return sheet;
     }
 

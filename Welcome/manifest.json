@@ -1,7 +1,7 @@
 {
   "Name": "Welcome",
   "Author": "JunxuanB",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "Description": "欢迎来到星露谷！包含纪念日节日、联机活动、小外主题奖励和自动更新。",
   "UniqueID": "JunxuanB.Welcome",
   "EntryDll": "Welcome.dll",

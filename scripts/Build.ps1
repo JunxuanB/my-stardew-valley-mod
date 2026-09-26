@@ -3,6 +3,7 @@
     [switch] $Install
 )
 . "$PSScriptRoot\Common.ps1"
+. "$PSScriptRoot\New-ModPackage.ps1"
 if (!(Test-Path -LiteralPath (Join-Path $GamePath 'StardewModdingAPI.dll'))) { throw 'Install SMAPI in GamePath first.' }
 $manifest = Get-Content -LiteralPath "$script:ProjectRoot\Welcome\manifest.json" -Raw -Encoding UTF8 | ConvertFrom-Json
 $version = $manifest.Version
@@ -37,7 +38,7 @@ $workerFolder = Join-Path $packageFolder 'update'
 New-Item -ItemType Directory -Path $workerFolder | Out-Null
 Copy-Item -LiteralPath "$PSScriptRoot\Common.ps1","$PSScriptRoot\Apply-AfterExit.ps1" -Destination $workerFolder
 $zip = Join-Path $script:ProjectRoot "artifacts\Welcome-$version.zip"
-Compress-Archive -LiteralPath $packageFolder -DestinationPath $zip -Force
+New-ModPackage -SourceDirectory $packageFolder -DestinationPath $zip -ExpectedVersion $version
 $hash = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
 [IO.File]::WriteAllText("$zip.sha256", "$hash  $([IO.Path]::GetFileName($zip))`n")
 if ($Install) { Install-ModPackage -PackagePath $zip -GamePath $GamePath -ExpectedVersion $version }
