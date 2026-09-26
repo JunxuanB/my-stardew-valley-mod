@@ -8,7 +8,7 @@ function Assert($Condition, [string] $Message) { if (!$Condition) { throw $Messa
 try {
     $source = Join-Path $archiveTestRoot 'source'
     New-Item -ItemType Directory -Force -Path "$source\assets\nested", "$source\update" | Out-Null
-    $identity = @{UniqueID='JunxuanB.Welcome'; EntryDll='Welcome.dll'; Version='1.0.1'} | ConvertTo-Json
+    $identity = @{UniqueID='JunxuanB.Welcome'; EntryDll='Welcome.dll'; Version='1.0.2'} | ConvertTo-Json
     [IO.File]::WriteAllText("$source\manifest.json", $identity, [Text.UTF8Encoding]::new($false))
     [IO.File]::WriteAllBytes("$source\Welcome.dll", [byte[]]@(1,2,3,4))
     [IO.File]::WriteAllBytes("$source\assets\nested\sample.bin", [byte[]]@(5,6,7,8))
@@ -24,8 +24,8 @@ try {
     try { Assert ($null -eq $legacy.GetEntry('Welcome/manifest.json')) 'Legacy failure was not reproduced.' }
     finally { $legacy.Dispose() }
 
-    $zip = Join-Path $archiveTestRoot 'Welcome-1.0.1.zip'
-    New-ModPackage -SourceDirectory $source -DestinationPath $zip -ExpectedVersion '1.0.1'
+    $zip = Join-Path $archiveTestRoot 'Welcome-1.0.2.zip'
+    New-ModPackage -SourceDirectory $source -DestinationPath $zip -ExpectedVersion '1.0.2'
     $archive = [IO.Compression.ZipFile]::OpenRead($zip)
     try {
         Assert (@($archive.Entries | Where-Object { $_.FullName.Contains('\') }).Count -eq 0) 'Backslashes remain in ZIP names.'
@@ -33,7 +33,7 @@ try {
         Assert ($null -ne $entry) 'The 1.0.0 updater cannot locate the future manifest.'
         $reader = [IO.StreamReader]::new($entry.Open())
         try { $next = $reader.ReadToEnd() | ConvertFrom-Json } finally { $reader.Dispose() }
-        Assert ($next.UniqueID -eq 'JunxuanB.Welcome' -and $next.Version -eq '1.0.1') 'Manifest contents changed.'
+        Assert ($next.UniqueID -eq 'JunxuanB.Welcome' -and $next.Version -eq '1.0.2') 'Manifest contents changed.'
         Assert ([version]$next.Version -gt [version]'1.0.0') 'Fixture must exercise a newer version.'
         Assert ($null -ne $archive.GetEntry('Welcome/assets/nested/sample.bin')) 'Nested resources are inaccessible.'
         Assert ($null -ne $archive.GetEntry('Welcome/update/Apply-AfterExit.ps1')) 'Worker is inaccessible.'

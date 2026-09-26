@@ -27,6 +27,14 @@ internal sealed class FestivalReply
     public bool Success { get; set; }
     public string Speaker { get; set; } = "";
 }
+internal sealed class FestivalPurchase
+{
+    public string Request { get; set; } = "";
+    public string Session { get; set; } = "";
+    public string Visit { get; set; } = "";
+    public string ItemId { get; set; } = "";
+    public int Quantity { get; set; }
+}
 internal sealed class FestivalPlayer
 {
     public long Id { get; set; }

@@ -74,12 +74,25 @@ internal static class RewardCatalog
     }
     internal static string? Purchase(Farmer who,string id,int quantity,FestivalPlayer record)
     {
+        string? error=Authorize(who,id,quantity,record);
+        if(error is not null)return error;
+        error=Deliver(who,id,quantity);
+        if(error is not null)return error;
+        Commit(who,id,quantity,record);
+        return null;
+    }
+    internal static string? Authorize(Farmer who,string id,int quantity,FestivalPlayer record)
+    {
         FestivalProduct? product=Products.FirstOrDefault(p=>p.Id==id);
         if(product is null)return "这件商品没有上架。";
         int purchased=record.Purchases.GetValueOrDefault(id);
         if(quantity<1||quantity>999||product.Limit>=0&&purchased+quantity>product.Limit)return "已达到本届的个人限购数量。";
         int total=checked(product.Price*quantity);
         if(product.Flowers?record.Bouquets<total:who.Money<total)return product.Flowers?"手捧花还不够。":"金币还不够。";
+        return null;
+    }
+    internal static string? Deliver(Farmer who,string id,int quantity)
+    {
         Item item=ItemRegistry.Create(id,quantity);
         int capacity=0;
         foreach(Item? slot in who.Items)
@@ -87,8 +100,14 @@ internal static class RewardCatalog
         if(capacity<item.Stack)return "背包放不下整批商品，没有扣款。";
         if(!who.couldInventoryAcceptThisItem(item))return "背包空间不足，没有扣款。";
         if(!who.addItemToInventoryBool(item))return "背包空间发生变化，请留出空位再试。";
+        return null;
+    }
+    internal static void Commit(Farmer who,string id,int quantity,FestivalPlayer record)
+    {
+        FestivalProduct product=Products.First(p=>p.Id==id);
+        int purchased=record.Purchases.GetValueOrDefault(id);
+        int total=checked(product.Price*quantity);
         if(product.Flowers)record.Bouquets-=total;else who.Money-=total;
         record.Purchases[id]=purchased+quantity;
-        return null;
     }
 }

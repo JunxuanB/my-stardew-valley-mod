@@ -18,6 +18,8 @@ internal sealed class FestivalSession
     private readonly Dictionary<string, double> kissCooldowns = [];
     private readonly HashSet<string> handled = [];
     private readonly Dictionary<string, FestivalReply> replies = [];
+    private readonly Dictionary<string, FestivalPurchase> purchaseOffers = [];
+    private readonly Dictionary<string, bool> purchaseDeliveries = [];
     private readonly HashSet<long> joined = [];
     private readonly Dictionary<long,double> lastSeen=[];
     private readonly Dictionary<long,HashSet<string>> heard=[];
@@ -74,7 +76,7 @@ internal sealed class FestivalSession
     }
     internal void Reset()
     {
-        host = null; View = null; handled.Clear(); replies.Clear(); joined.Clear(); lastSeen.Clear();heard.Clear();answers.Clear(); kissCooldowns.Clear();
+        host = null; View = null; handled.Clear(); replies.Clear(); purchaseOffers.Clear(); purchaseDeliveries.Clear(); joined.Clear(); lastSeen.Clear();heard.Clear();answers.Clear(); kissCooldowns.Clear();
         entered=false;visit="";pending=null;
     }
     internal void Send(FestivalRequest request)
@@ -103,6 +105,7 @@ internal sealed class FestivalSession
         {
             if (e.Type == "Festival/State") Receive(e.ReadAs<FestivalSnapshot>());
             else if (e.Type == "Festival/Reply") ReceiveReply(e.ReadAs<FestivalReply>());
+            else if (e.Type == "Festival/Purchase") ReceivePurchase(e.ReadAs<FestivalPurchase>());
         }
     }
     private void Receive(FestivalSnapshot snapshot)
@@ -113,6 +116,18 @@ internal sealed class FestivalSession
     }
     private void ReceiveReply(FestivalReply reply)
     {if(!string.IsNullOrEmpty(reply.Text)&&reply.Speaker=="")Notice?.Invoke(reply.Text);Replied?.Invoke(reply);}
+    private void ReceivePurchase(FestivalPurchase purchase)
+    {
+        if(!entered||purchase.Session!=View?.Id||purchase.Visit!=visit||purchase.Quantity is <1 or >999)return;
+        // Inventory ownership stays with the farmhand; retries only acknowledge the first local delivery.
+        if(!purchaseDeliveries.TryGetValue(purchase.Request,out bool delivered))
+        {
+            delivered=RewardCatalog.Deliver(Game1.player,purchase.ItemId,purchase.Quantity) is null;
+            purchaseDeliveries[purchase.Request]=delivered;
+        }
+        Send(new FestivalRequest{Action="BuyComplete",Game=purchase.Request,Kind=purchase.ItemId,
+            Choice=purchase.Quantity,Value=delivered?1:0});
+    }
     private void Sync()
     {
         if (host is null) return;
@@ -169,6 +184,7 @@ internal sealed class FestivalSession
         if (!handled.Add(nonce))
         {
             if (replies.TryGetValue(nonce, out FestivalReply? reply)) Tell(sender, reply.Text,r.Id,reply.Success,reply.Speaker);
+            else if(purchaseOffers.TryGetValue(nonce,out FestivalPurchase? purchase))SendPurchase(sender,purchase);
             return;
         }
         if (r.Action == "Leave")
@@ -329,8 +345,36 @@ internal sealed class FestivalSession
                 {Tell(sender,"先完成或取消当前活动。",r.Id);break;}
                 FestivalProduct? product=RewardCatalog.Products.FirstOrDefault(p=>p.Id==r.Kind);
                 if(product is null||!Near(who,product.Flowers?24:18,53,6)){Tell(sender,"请到对应摊位柜台前购买。",r.Id);break;}
-                string? error = Buy?.Invoke(who,r.Kind,Math.Clamp(r.Choice,1,999),player);
-                Tell(sender,error ?? "",r.Id,error is null); break;
+                int quantity=Math.Clamp(r.Choice,1,999);
+                if(sender==Game1.player.UniqueMultiplayerID)
+                {
+                    string? error = Buy?.Invoke(who,r.Kind,quantity,player);
+                    Tell(sender,error ?? "",r.Id,error is null);
+                }
+                else
+                {
+                    string? error=RewardCatalog.Authorize(who,r.Kind,quantity,player);
+                    if(error is not null)Tell(sender,error,r.Id);
+                    else
+                    {
+                        var purchase=new FestivalPurchase{Request=r.Id,Session=host.Id,Visit=player.Visit,ItemId=r.Kind,Quantity=quantity};
+                        purchaseOffers[nonce]=purchase;
+                        SendPurchase(sender,purchase);
+                    }
+                }
+                break;
+            case "BuyComplete":
+                string purchaseKey=sender+":"+r.Game;
+                if(!purchaseOffers.TryGetValue(purchaseKey,out FestivalPurchase? offer)
+                    ||offer.ItemId!=r.Kind||offer.Quantity!=r.Choice)break;
+                purchaseOffers.Remove(purchaseKey);
+                if(r.Value==1)
+                {
+                    RewardCatalog.Commit(who,offer.ItemId,offer.Quantity,player);
+                    Tell(sender,"",offer.Request,true);
+                }
+                else Tell(sender,"背包放不下整批商品，没有扣款。",offer.Request);
+                break;
             case "PhotoSolo":
                 if (!Involved(sender) && Near(who,29,61,5)) host.Activities.Add(new FestivalActivity { Kind="Photo",A=sender,B=sender,Phase="Pose",Started=Now,Deadline=Now+3 });
                 break;
@@ -339,6 +383,10 @@ internal sealed class FestivalSession
                 break;
         }
         Sync();
+    }
+    private void SendPurchase(long to,FestivalPurchase purchase)
+    {
+        helper.Multiplayer.SendMessage(purchase,"Festival/Purchase",[AnniversaryContent.ModId],[to]);
     }
     private bool FormalGames() => host!.Activities.Any(a => a.Phase is not ("Invite" or "Result") && a.Kind is "Slime" or "Cake" or "Quiz" or "Survey");
     private string RollCatch()=>random.NextDouble()<.60?"(O)458":"(O)166";
@@ -384,6 +432,8 @@ internal sealed class FestivalSession
     }
     private void RemovePlayer(long id)
     {
+        foreach(string key in purchaseOffers.Keys.Where(key=>key.StartsWith(id+":",StringComparison.Ordinal)).ToArray())
+            purchaseOffers.Remove(key);
         joined.Remove(id);lastSeen.Remove(id);CancelFor(id);Player(id).Present=false;Player(id).Bouquets=0;
         Trace?.Invoke($"Festival leave: player={id}.");
     }
