@@ -1,0 +1,46 @@
+{
+  "Walk": {
+    "Texture": "xiaowai-detail.png",
+    "FrameWidth": 96,
+    "FrameHeight": 128,
+    "RenderScale": 1,
+    "FramesPerDirection": 4,
+    "Rows": [
+      "down",
+      "right",
+      "up",
+      "left"
+    ],
+    "NativeProxyTexture": "xiaowai.png",
+    "NativeProxyFrameWidth": 24,
+    "NativeProxyFrameHeight": 32
+  },
+  "Home": {
+    "Texture": "xiaowai-home-detail.png",
+    "FrameWidth": 160,
+    "FrameHeight": 160,
+    "RenderScale": 1,
+    "Poses": {
+      "idle": 0,
+      "smile": 1,
+      "sit": 2,
+      "wave": 3,
+      "sleep": 4
+    }
+  },
+  "Source": "User-approved reference; side passing steps use a continuous silhouette warp, no body-part splicing",
+  "SideWalkCycle": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "VerticalWalkCycle": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1
+  ]
+}

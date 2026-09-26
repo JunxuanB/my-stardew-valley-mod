@@ -1,8 +1,8 @@
 {
   "Name": "Welcome",
   "Author": "JunxuanB",
-  "Version": "0.3.1",
-  "Description": "每次进入存档或加入联机时，向当前玩家显示欢迎提示。",
+  "Version": "1.0.0",
+  "Description": "欢迎来到星露谷！包含纪念日节日、联机活动、小外主题奖励和自动更新。",
   "UniqueID": "JunxuanB.Welcome",
   "EntryDll": "Welcome.dll",
   "MinimumApiVersion": "4.0.0",

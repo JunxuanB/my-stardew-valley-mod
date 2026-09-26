@@ -19,6 +19,15 @@ namespace Welcome
     }
 }
 
+namespace Welcome.Anniversary
+{
+    internal sealed class AnniversaryModule
+    {
+        public AnniversaryModule(StardewModdingAPI.IModHelper helper, StardewModdingAPI.IMonitor monitor) { }
+        public void Register() { }
+    }
+}
+
 namespace StardewModdingAPI
 {
     public enum LogLevel { Info, Error }

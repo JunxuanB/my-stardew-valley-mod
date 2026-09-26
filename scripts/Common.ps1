@@ -14,8 +14,18 @@ function Find-DevTool([string] $Name) {
     $command = Get-Command $Name -ErrorAction SilentlyContinue
     if ($command) { return $command.Source }
     $relative = if ($Name -eq 'dotnet') { 'dotnet\dotnet.exe' } else { 'gh\bin\gh.exe' }
-    $candidate = Join-Path $env:LOCALAPPDATA "StardewModDev\$relative"
-    if (Test-Path -LiteralPath $candidate) { return $candidate }
+    $localAppData = if ($env:LOCALAPPDATA) {
+        $env:LOCALAPPDATA
+    } else {
+        [Environment]::GetFolderPath([Environment+SpecialFolder]::LocalApplicationData)
+    }
+    $candidates = @(
+        (Join-Path $localAppData "StardewModDev\$relative"),
+        (Join-Path $env:USERPROFILE "AppData\Local\StardewModDev\$relative")
+    )
+    foreach ($candidate in $candidates | Select-Object -Unique) {
+        if (Test-Path -LiteralPath $candidate) { return $candidate }
+    }
     throw "Missing $Name. Install it and reopen your terminal."
 }
 

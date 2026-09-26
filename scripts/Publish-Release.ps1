@@ -28,6 +28,10 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Could not push version tag.' }
     $zip = Join-Path $script:ProjectRoot "artifacts\Welcome-$version.zip"
     $notes = Join-Path $script:ProjectRoot 'artifacts\release-notes.md'
+    $versionNotes = Join-Path $script:ProjectRoot "docs\releases\$version.md"
+    if (Test-Path -LiteralPath $versionNotes) {
+        Copy-Item -LiteralPath $versionNotes -Destination $notes -Force
+    } else {
     @"
 Welcome $version
 
@@ -40,6 +44,7 @@ Windows 内置自动更新：在 SMAPI 加载模组阶段检查新版，校验 S
 从 0.2.x 升级到本版本的一次迁移仍按旧版逻辑，需要自行退出游戏；已安装 0.3.0 或更高版本时，会在新版准备完成后阻断本次启动。
 0.1.x 用户需先覆盖安装一次本版本，之后即可内置自动更新。
 "@ | Set-Content -LiteralPath $notes -Encoding UTF8
+    }
     & $gh release create $tag $zip "$zip.sha256" --repo $script:Repository --verify-tag --title "Welcome $version" --notes-file $notes
     if ($LASTEXITCODE -ne 0) { throw 'Release creation failed. Existing releases are never overwritten; inspect GitHub before retrying.' }
 } finally { Pop-Location }

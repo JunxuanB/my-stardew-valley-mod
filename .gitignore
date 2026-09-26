@@ -9,4 +9,5 @@ artifacts/
 config.json
 *.local.json
 *.local.props
-
+**/__pycache__/
+*.py[cod]

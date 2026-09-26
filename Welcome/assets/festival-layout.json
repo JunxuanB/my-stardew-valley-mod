@@ -1,0 +1,3692 @@
+{
+  "Preview": [
+    0,
+    46,
+    50,
+    39
+  ],
+  "Entry": [
+    1,
+    54
+  ],
+  "Exit": [
+    0,
+    53,
+    1,
+    3
+  ],
+  "Pond": [
+    36,
+    76
+  ],
+  "Clear": [
+    {
+      "Area": [
+        16,
+        55,
+        1,
+        1
+      ],
+      "Layers": [
+        "Front"
+      ]
+    },
+    {
+      "Area": [
+        16,
+        56,
+        1,
+        1
+      ],
+      "Layers": [
+        "Buildings"
+      ]
+    },
+    {
+      "Area": [
+        24,
+        47,
+        1,
+        7
+      ],
+      "Layers": [
+        "Buildings",
+        "Front",
+        "AlwaysFront"
+      ]
+    },
+    {
+      "Area": [
+        33,
+        62,
+        5,
+        3
+      ],
+      "Layers": [
+        "Buildings",
+        "Front",
+        "AlwaysFront"
+      ]
+    }
+  ],
+  "Copies": [
+    {
+      "Map": "Maps/Town-EggFestival",
+      "Source": [
+        19,
+        49,
+        4,
+        5
+      ],
+      "Target": [
+        17,
+        48
+      ],
+      "Layers": [
+        "Buildings",
+        "Front",
+        "AlwaysFront"
+      ],
+      "FestivalOnly": true
+    },
+    {
+      "Map": "Maps/Town-EggFestival",
+      "Source": [
+        19,
+        49,
+        4,
+        5
+      ],
+      "Target": [
+        23,
+        48
+      ],
+      "Layers": [
+        "Buildings",
+        "Front",
+        "AlwaysFront"
+      ],
+      "FestivalOnly": true
+    },
+    {
+      "Map": "Maps/Town-EggFestival",
+      "Source": [
+        38,
+        57,
+        3,
+        2
+      ],
+      "Target": [
+        23,
+        65
+      ],
+      "Layers": [
+        "Buildings",
+        "Front",
+        "AlwaysFront"
+      ],
+      "FestivalOnly": true
+    },
+    {
+      "Map": "Maps/Town-EggFestival",
+      "Source": [
+        38,
+        57,
+        3,
+        2
+      ],
+      "Target": [
+        41,
+        59
+      ],
+      "Layers": [
+        "Buildings",
+        "Front",
+        "AlwaysFront"
+      ],
+      "FestivalOnly": true
+    },
+    {
+      "Map": "Maps/Town-EggFestival",
+      "Source": [
+        38,
+        57,
+        3,
+        2
+      ],
+      "Target": [
+        22,
+        72
+      ],
+      "Layers": [
+        "Buildings",
+        "Front",
+        "AlwaysFront"
+      ],
+      "FestivalOnly": true
+    },
+    {
+      "Map": "Maps/Town-EggFestival",
+      "Source": [
+        38,
+        57,
+        3,
+        2
+      ],
+      "Target": [
+        35,
+        71
+      ],
+      "Layers": [
+        "Buildings",
+        "Front",
+        "AlwaysFront"
+      ],
+      "FestivalOnly": true
+    }
+  ],
+  "Tiles": [
+    {
+      "Layer": "Front",
+      "At": [
+        20,
+        46
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 4
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        20,
+        47
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 36
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        21,
+        46
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        21,
+        47
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        22,
+        46
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 6
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        22,
+        47
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 38
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        47,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 4
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        47,
+        57
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 36
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        48,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 6
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        57
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 38
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        0,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 4
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        0,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 36
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        1,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        1,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        2,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        2,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        3,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        3,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        4,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        4,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        5,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        5,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        6,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        6,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        7,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        7,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        8,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        8,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        9,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        9,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        10,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        10,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        11,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        11,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        12,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        12,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        13,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        13,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        14,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        14,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        15,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 6
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 38
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        16,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 4
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        16,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 36
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        17,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        17,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        18,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        18,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        19,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        19,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        20,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        20,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        21,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        21,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        22,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        22,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        23,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        23,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        24,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        24,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        25,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        25,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        26,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        26,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        27,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 6
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        27,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 38
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        27,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 4
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        27,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 36
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        28,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        29,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        29,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        30,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        30,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        31,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        31,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        32,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        32,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        33,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        33,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        34,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        34,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        35,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        35,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        36,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        36,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        37,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        37,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        38,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        38,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        39,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        39,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        40,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        40,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        41,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        41,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        42,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        42,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        43,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        43,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        44,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        44,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        45,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        45,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        46,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        46,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        47,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        47,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        48,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 6
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        83
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 38
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        27,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 7
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        27,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        27,
+        77
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        27,
+        78
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        27,
+        79
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        27,
+        80
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        27,
+        81
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        27,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        15,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 7
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        57
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        58
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        59
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        60
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        61
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        62
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        63
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        64
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        65
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        66
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        67
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        68
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        69
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        70
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        71
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        72
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        73
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        74
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        15,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        48,
+        57
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 7
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        58
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        59
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        60
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        61
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        62
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        63
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        64
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        65
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        66
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        67
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        68
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        69
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        70
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        71
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        72
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        73
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        74
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        75
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        76
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        77
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        78
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        79
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        80
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        81
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        48,
+        82
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        28,
+        47
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 7
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        48
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        49
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        50
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        51
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        52
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        53
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        54
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 39
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 71
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        28,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 4
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        28,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 36
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        29,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        29,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        30,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        30,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        31,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 5
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        31,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 37
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        32,
+        55
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 6
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        32,
+        56
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 38
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        33,
+        62
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 800
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        34,
+        62
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 801
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        35,
+        62
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 802
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        36,
+        62
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 803
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        37,
+        62
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 804
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        33,
+        63
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 832
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        34,
+        63
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 833
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        35,
+        63
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 834
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        36,
+        63
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 835
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        37,
+        63
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 836
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        33,
+        64
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 864
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        34,
+        64
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 865
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        35,
+        64
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 866
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        36,
+        64
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 867
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        37,
+        64
+      ],
+      "Texture": "TileSheets/furniture",
+      "Index": 868
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        36,
+        76
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        37,
+        76
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        38,
+        76
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        39,
+        76
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        40,
+        76
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        36,
+        77
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        37,
+        77
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0,
+      "Properties": {
+        "Water": "T"
+      }
+    },
+    {
+      "Layer": "Back",
+      "At": [
+        37,
+        77
+      ],
+      "Texture": "Maps/spring_outdoorsTileSheet",
+      "Index": 1246,
+      "Properties": {
+        "Water": "I"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        38,
+        77
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0,
+      "Properties": {
+        "Water": "T"
+      }
+    },
+    {
+      "Layer": "Back",
+      "At": [
+        38,
+        77
+      ],
+      "Texture": "Maps/spring_outdoorsTileSheet",
+      "Index": 1246,
+      "Properties": {
+        "Water": "I"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        39,
+        77
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0,
+      "Properties": {
+        "Water": "T"
+      }
+    },
+    {
+      "Layer": "Back",
+      "At": [
+        39,
+        77
+      ],
+      "Texture": "Maps/spring_outdoorsTileSheet",
+      "Index": 1246,
+      "Properties": {
+        "Water": "I"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        40,
+        77
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        36,
+        78
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        37,
+        78
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0,
+      "Properties": {
+        "Water": "T"
+      }
+    },
+    {
+      "Layer": "Back",
+      "At": [
+        37,
+        78
+      ],
+      "Texture": "Maps/spring_outdoorsTileSheet",
+      "Index": 1246,
+      "Properties": {
+        "Water": "I"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        38,
+        78
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0,
+      "Properties": {
+        "Water": "T"
+      }
+    },
+    {
+      "Layer": "Back",
+      "At": [
+        38,
+        78
+      ],
+      "Texture": "Maps/spring_outdoorsTileSheet",
+      "Index": 1246,
+      "Properties": {
+        "Water": "I"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        39,
+        78
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0,
+      "Properties": {
+        "Water": "T"
+      }
+    },
+    {
+      "Layer": "Back",
+      "At": [
+        39,
+        78
+      ],
+      "Texture": "Maps/spring_outdoorsTileSheet",
+      "Index": 1246,
+      "Properties": {
+        "Water": "I"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        40,
+        78
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        36,
+        79
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        37,
+        79
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0,
+      "Properties": {
+        "Water": "T"
+      }
+    },
+    {
+      "Layer": "Back",
+      "At": [
+        37,
+        79
+      ],
+      "Texture": "Maps/spring_outdoorsTileSheet",
+      "Index": 1246,
+      "Properties": {
+        "Water": "I"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        38,
+        79
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0,
+      "Properties": {
+        "Water": "T"
+      }
+    },
+    {
+      "Layer": "Back",
+      "At": [
+        38,
+        79
+      ],
+      "Texture": "Maps/spring_outdoorsTileSheet",
+      "Index": 1246,
+      "Properties": {
+        "Water": "I"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        39,
+        79
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0,
+      "Properties": {
+        "Water": "T"
+      }
+    },
+    {
+      "Layer": "Back",
+      "At": [
+        39,
+        79
+      ],
+      "Texture": "Maps/spring_outdoorsTileSheet",
+      "Index": 1246,
+      "Properties": {
+        "Water": "I"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        40,
+        79
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        36,
+        80
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        37,
+        80
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        38,
+        80
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        39,
+        80
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        40,
+        80
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        26,
+        61
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        31,
+        61
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        25,
+        62
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        32,
+        62
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        25,
+        71
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        32,
+        71
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        34,
+        60
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 729
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        35,
+        60
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 730
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        36,
+        60
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 731
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        46,
+        59
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 428
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        47,
+        59
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 429
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        46,
+        60
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 460
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        47,
+        60
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 461
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        46,
+        61
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 36
+    },
+    {
+      "Layer": "Front",
+      "At": [
+        32,
+        77
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 239
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        32,
+        78
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 271
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        45,
+        61
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        45,
+        62
+      ],
+      "Texture": "assets/collision.png",
+      "Index": 0
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        18,
+        72
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 285,
+      "Properties": {
+        "Action": "AnniversaryStrawberry"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        19,
+        72
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 286,
+      "Properties": {
+        "Action": "AnniversaryStrawberry"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        20,
+        72
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 287,
+      "Properties": {
+        "Action": "AnniversaryStrawberry"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        18,
+        73
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 317,
+      "Properties": {
+        "Action": "AnniversaryStrawberry"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        19,
+        73
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 318,
+      "Properties": {
+        "Action": "AnniversaryStrawberry"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        20,
+        73
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 319,
+      "Properties": {
+        "Action": "AnniversaryStrawberry"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        18,
+        74
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 349,
+      "Properties": {
+        "Action": "AnniversaryStrawberry"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        19,
+        74
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 350,
+      "Properties": {
+        "Action": "AnniversaryStrawberry"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        20,
+        74
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 351,
+      "Properties": {
+        "Action": "AnniversaryStrawberry"
+      }
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        18,
+        71
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 253
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        19,
+        71
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 254
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        20,
+        71
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 255
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        21,
+        58
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 34
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        27,
+        58
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 34
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        37,
+        67
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 34
+    },
+    {
+      "Layer": "Buildings",
+      "At": [
+        38,
+        73
+      ],
+      "Texture": "Maps/Festivals",
+      "Index": 34
+    }
+  ],
+  "Sprites": [
+    {
+      "Texture": "LooseSprites/Cursors",
+      "Source": [
+        540,
+        1196,
+        98,
+        79
+      ],
+      "At": [
+        416,
+        920
+      ],
+      "Scale": 1
+    },
+    {
+      "Texture": "LooseSprites/Cursors",
+      "Source": [
+        527,
+        1249,
+        12,
+        25
+      ],
+      "At": [
+        400,
+        983
+      ],
+      "Scale": 1
+    },
+    {
+      "Texture": "LooseSprites/Cursors",
+      "Source": [
+        527,
+        1249,
+        12,
+        25
+      ],
+      "At": [
+        512,
+        983
+      ],
+      "Scale": 1
+    },
+    {
+      "Texture": "LooseSprites/Cursors",
+      "Source": [
+        527,
+        1249,
+        12,
+        25
+      ],
+      "At": [
+        400,
+        1127
+      ],
+      "Scale": 1
+    },
+    {
+      "Texture": "LooseSprites/Cursors",
+      "Source": [
+        527,
+        1249,
+        12,
+        25
+      ],
+      "At": [
+        512,
+        1127
+      ],
+      "Scale": 1
+    },
+    {
+      "Texture": "Maps/springobjects",
+      "Source": [
+        80,
+        144,
+        16,
+        16
+      ],
+      "At": [
+        552,
+        992
+      ],
+      "Scale": 2
+    },
+    {
+      "Texture": "TileSheets/Craftables",
+      "Source": [
+        80,
+        1152,
+        16,
+        32
+      ],
+      "At": [
+        720,
+        966
+      ],
+      "Scale": 1,
+      "SortY": 983
+    },
+    {
+      "Texture": "Maps/springobjects",
+      "Source": [
+        256,
+        256,
+        16,
+        16
+      ],
+      "At": [
+        296,
+        1153
+      ],
+      "Scale": 2
+    }
+  ],
+  "Actors": [
+    {
+      "Name": "Pierre",
+      "At": [
+        18,
+        51
+      ],
+      "Facing": 2,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Emily",
+      "At": [
+        24,
+        51
+      ],
+      "Facing": 2,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Willy",
+      "At": [
+        42,
+        75
+      ],
+      "Facing": 2,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Gus",
+      "At": [
+        29,
+        63
+      ],
+      "Facing": 1,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Xiaowai",
+      "At": [
+        35,
+        59
+      ],
+      "Facing": 2,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Lewis",
+      "At": [
+        29,
+        71
+      ],
+      "Facing": 2,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Caroline",
+      "At": [
+        22,
+        58
+      ],
+      "Facing": 2,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Robin",
+      "At": [
+        18,
+        54
+      ],
+      "Facing": 1,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Evelyn",
+      "At": [
+        24,
+        63
+      ],
+      "Facing": 2,
+      "Dialogue": "我把开得最好的一枝花留给了乔治。他说不需要，却一直没有放下。"
+    },
+    {
+      "Name": "Abigail",
+      "At": [
+        23,
+        69
+      ],
+      "Facing": 1,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Sam",
+      "At": [
+        33,
+        70
+      ],
+      "Facing": 3,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Penny",
+      "At": [
+        25,
+        70
+      ],
+      "Facing": 3,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Haley",
+      "At": [
+        33,
+        59
+      ],
+      "Facing": 1,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Marnie",
+      "At": [
+        21,
+        74
+      ],
+      "Facing": 3,
+      "Dialogue": ""
+    },
+    {
+      "Name": "Alex",
+      "At": [
+        38,
+        59
+      ],
+      "Facing": 1,
+      "Dialogue": "今天不比谁跑得快。我答应奶奶，陪她慢慢走。"
+    },
+    {
+      "Name": "Elliott",
+      "At": [
+        44,
+        73
+      ],
+      "Facing": 3,
+      "Dialogue": "我写了很长一段祝词，后来只留下四个字：明天见面。"
+    },
+    {
+      "Name": "Harvey",
+      "At": [
+        33,
+        57
+      ],
+      "Facing": 2,
+      "Dialogue": "我带了急救箱，不过今天最忙的可能是格斯。希望大家只是吃得太开心。"
+    },
+    {
+      "Name": "Leah",
+      "At": [
+        33,
+        73
+      ],
+      "Facing": 0,
+      "Dialogue": "两根弯曲的树枝也能搭成拱门。不必长得一样，也可以一起撑住什么。"
+    },
+    {
+      "Name": "Maru",
+      "At": [
+        39,
+        57
+      ],
+      "Facing": 2,
+      "Dialogue": "我想做一台记录拥抱的机器，结果发现，按按钮会耽误拥抱。"
+    },
+    {
+      "Name": "Sebastian",
+      "At": [
+        31,
+        70
+      ],
+      "Facing": 1,
+      "Dialogue": "我只是来看看。山姆如果说他早就猜到了，你可别告诉他我笑了。"
+    },
+    {
+      "Name": "Shane",
+      "At": [
+        46,
+        74
+      ],
+      "Facing": 3,
+      "Dialogue": "贾斯让我替她保管蝴蝶结。比照顾一群鸡还需要小心。"
+    },
+    {
+      "Name": "Clint",
+      "At": [
+        44,
+        61
+      ],
+      "Facing": 1,
+      "Dialogue": "戒指可以量尺寸，心意却没有尺子。眼镜倒是能修，把破的交给我就好。"
+    },
+    {
+      "Name": "Demetrius",
+      "At": [
+        26,
+        54
+      ],
+      "Facing": 3,
+      "Dialogue": "本来想记录大家的心跳变化，罗宾把记录板换成了我的手。"
+    },
+    {
+      "Name": "George",
+      "At": [
+        26,
+        64
+      ],
+      "Facing": 3,
+      "Dialogue": "我只是替艾芙琳拿着花。你看什么？……好吧，是挺好看的。"
+    },
+    {
+      "Name": "Jas",
+      "At": [
+        24,
+        74
+      ],
+      "Facing": 0,
+      "Dialogue": "我给自己的布娃娃也留了蛋糕。它很有礼貌，一口都没有偷吃。"
+    },
+    {
+      "Name": "Jodi",
+      "At": [
+        20,
+        56
+      ],
+      "Facing": 2,
+      "Dialogue": "今天不用赶着做饭，我反而不知道该把手放哪里了。肯特说，放在他手里就好。"
+    },
+    {
+      "Name": "Kent",
+      "At": [
+        23,
+        56
+      ],
+      "Facing": 3,
+      "Dialogue": "这里的喧闹让我有些紧张。不过，听见家人的笑声就好多了。"
+    },
+    {
+      "Name": "Krobus",
+      "At": [
+        45,
+        80
+      ],
+      "Facing": 3,
+      "Dialogue": "我挑了一处阴凉的位置。鲜花不介意我从哪里来，你们好像也不介意。"
+    },
+    {
+      "Name": "Linus",
+      "At": [
+        18,
+        58
+      ],
+      "Facing": 1,
+      "Dialogue": "我也能在这里坐一会儿吧？一朵小花，就能让任何地方像家。"
+    },
+    {
+      "Name": "Pam",
+      "At": [
+        44,
+        58
+      ],
+      "Facing": 3,
+      "Dialogue": "今天这杯不加酒。我答应潘妮，回去的路陪她一起走。"
+    },
+    {
+      "Name": "Sandy",
+      "At": [
+        37,
+        57
+      ],
+      "Facing": 2,
+      "Dialogue": "沙漠里也会开花。艾米丽邀请我的时候，我就把今天从日历上圈出来了。"
+    },
+    {
+      "Name": "Vincent",
+      "At": [
+        23,
+        67
+      ],
+      "Facing": 2,
+      "Dialogue": "如果我把两块蛋糕叠起来，是不是就只算一块了？潘妮老师说这道题不能这么算。"
+    },
+    {
+      "Name": "Wizard",
+      "At": [
+        29,
+        78
+      ],
+      "Facing": 1,
+      "Dialogue": "维系两个人的未必是魔法。我观察了很久，似乎也可能是每天记得留一盏灯。"
+    },
+    {
+      "Name": "Dwarf",
+      "At": [
+        43,
+        81
+      ],
+      "Facing": 3,
+      "Dialogue": "这些闪闪发亮的丝带能挖到吗？如果不能，我愿意用一块好石头交换。"
+    },
+    {
+      "Name": "Leo",
+      "At": [
+        40,
+        74
+      ],
+      "Facing": 1,
+      "Dialogue": "我想把今天讲给鹦鹉听。它们可能先问：蛋糕的种子在哪里？"
+    },
+    {
+      "Name": "Marlon",
+      "At": [
+        33,
+        81
+      ],
+      "Facing": 0,
+      "Dialogue": "今天不需要剑。我把最锋利的东西留在了家里，免得吓到来宾。"
+    },
+    {
+      "Name": "Gunther",
+      "At": [
+        38,
+        61
+      ],
+      "Facing": 2,
+      "Dialogue": "不是每件值得记住的东西都能放进展柜。今天的笑声就是。"
+    },
+    {
+      "Name": "Birdie",
+      "At": [
+        46,
+        76
+      ],
+      "Facing": 3,
+      "Dialogue": "海风把许多事带走，也会把新朋友送来。今天这一趟很值得。"
+    },
+    {
+      "Name": "Governor",
+      "At": [
+        42,
+        57
+      ],
+      "Facing": 2,
+      "Dialogue": "今天我只是来宾。祝词短一点，大家就能早点吃蛋糕。"
+    },
+    {
+      "Name": "Morris",
+      "At": [
+        46,
+        57
+      ],
+      "Facing": 3,
+      "Dialogue": "我今天没带优惠券。别这么看我，参加庆祝也不一定要谈生意。"
+    },
+    {
+      "Name": "Mister Qi",
+      "At": [
+        29,
+        80
+      ],
+      "Facing": 1,
+      "Dialogue": "最难的挑战，有时是记住一个普通日子。今天的奖励，你们已经拿到了。"
+    },
+    {
+      "Name": "Bouncer",
+      "At": [
+        31,
+        74
+      ],
+      "Facing": 2,
+      "Dialogue": "今天没有暗号，也不检查邀请函。大家都可以进来。"
+    },
+    {
+      "Name": "Old Mariner",
+      "At": [
+        46,
+        81
+      ],
+      "Facing": 2,
+      "Dialogue": "有些人向海许愿，有些人把愿望亲口说给身边的人。后者不必等晴天。"
+    }
+  ],
+  "ClearBushes": [
+    [
+      35,
+      73,
+      8,
+      10
+    ],
+    [
+      32,
+      60,
+      10,
+      8
+    ],
+    [
+      40,
+      58,
+      5,
+      4
+    ],
+    [
+      17,
+      70,
+      6,
+      6
+    ],
+    [
+      43,
+      62,
+      4,
+      3
+    ]
+  ],
+  "ClearTrees": [
+    [
+      18,
+      72,
+      3,
+      3
+    ]
+  ],
+  "Interactions": [
+    {
+      "Id": "Pierre",
+      "Area": [
+        17,
+        51,
+        4,
+        2
+      ]
+    },
+    {
+      "Id": "Emily",
+      "Area": [
+        23,
+        51,
+        4,
+        2
+      ]
+    },
+    {
+      "Id": "Cake",
+      "Area": [
+        33,
+        62,
+        5,
+        3
+      ]
+    },
+    {
+      "Id": "Strawberry",
+      "Area": [
+        18,
+        71,
+        3,
+        4
+      ]
+    }
+  ],
+  "SurveyTargets": [
+    {
+      "Id": "cake",
+      "Name": "蛋糕桌",
+      "Npc": "",
+      "Area": [
+        33,
+        62,
+        5,
+        3
+      ],
+      "ClueA": "调查笔记 A：我发现一座可以吃掉的粉色建筑。人类没有报修，反而准备把它分给大家。",
+      "ClueB": "调查笔记 B：它的地基是一片白云，两把刀据说比一把更有仪式感。我建议先别拆屋顶。",
+      "Observation": "白色桌布上摆着大蛋糕，格斯把餐刀留在了桌边。"
+    },
+    {
+      "Id": "gifts",
+      "Name": "小外前面的礼物堆",
+      "Npc": "",
+      "Area": [
+        34,
+        60,
+        3,
+        1
+      ],
+      "ClueA": "调查笔记 A：人类想让对方得到一样东西，却先把它藏起来。这种交付方式效率很低，大家倒很开心。",
+      "ClueB": "调查笔记 B：嫌疑物穿着漂亮外衣，还系了绳结。它们就在我的脚前；我本人没有被打包。",
+      "Observation": "小外面前摆着几只包好的礼物盒，丝带被认真地打成了结。"
+    },
+    {
+      "Id": "arch",
+      "Name": "花拱门",
+      "Npc": "",
+      "Area": [
+        26,
+        59,
+        6,
+        3
+      ],
+      "ClueA": "调查笔记 A：这里有一扇从来关不上的门。没有房间，也没有门锁，却总有人郑重地站进去。",
+      "ClueB": "调查笔记 B：植物爬上了门框，门下正好放得下两个笑容。也许它通向某种共同生活。",
+      "Observation": "花拱下留着两个人的位置，白色花瓣落在石砖上。"
+    },
+    {
+      "Id": "pond",
+      "Name": "临时鱼池",
+      "Npc": "",
+      "Area": [
+        36,
+        76,
+        5,
+        5
+      ],
+      "ClueA": "调查笔记 A：一小块海被搬进了镇里。奇怪的是，里面住的不是鱼，而是惊喜。",
+      "ClueB": "调查笔记 B：石头围着它，渔网陪着它。它在热闹酒馆的南边，但喝起来绝不会比汽水好。",
+      "Observation": "石沿里的水轻轻晃动，渔网挂在旁边，池里藏着小礼物。"
+    },
+    {
+      "Id": "balloons",
+      "Name": "彩色气球束",
+      "Npc": "",
+      "Area": [
+        46,
+        59,
+        2,
+        3
+      ],
+      "ClueA": "调查笔记 A：人类给空气穿上彩色衣服，它就立刻开始想逃跑。空气原来这么不爱上班。",
+      "ClueB": "调查笔记 B：几根细线正在挽留这群逃跑者。它们悬在广场东边，既不像水果，也不能真的放生。",
+      "Observation": "红、绿、蓝的气球系在一起，细绳把它们留在了广场上。"
+    },
+    {
+      "Id": "lantern",
+      "Name": "池边小灯",
+      "Npc": "",
+      "Area": [
+        32,
+        77,
+        1,
+        2
+      ],
+      "ClueA": "调查笔记 A：太阳还没下班，地面上就已经有人准备了一颗备用的。体积小得很礼貌。",
+      "ClueB": "调查笔记 B：它守着水边和花桶，等夜晚来时才算正式上岗。别拿它去孵小鸡。",
+      "Observation": "小灯静静亮着，照着池边草地和回去的路。"
+    },
+    {
+      "Id": "haley",
+      "Name": "海莉",
+      "Npc": "Haley",
+      "Area": [
+        33,
+        59,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一位人类让我对着镜头念蔬菜。我认真检查了厨房，才发现她想收集的是笑容。",
+      "ClueB": "调查笔记 B：她能把一瞬间装进小小的盒子。我的蔬菜发音显然还没有通过她的拍摄标准。",
+      "Observation": ""
+    },
+    {
+      "Id": "evelyn",
+      "Name": "艾芙琳",
+      "Npc": "Evelyn",
+      "Area": [
+        24,
+        63,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一位人类把最漂亮的一枝花，送给了一个嘴上说不需要的人。观察发现，他的手却一直没有松开。",
+      "ClueB": "调查笔记 B：她大概早就熟悉那种嘴硬。她保存了许多个春天，今天仍然愿意把最好的一枝留给身边的人。",
+      "Observation": ""
+    },
+    {
+      "Id": "abigail",
+      "Name": "阿比盖尔",
+      "Npc": "Abigail",
+      "Area": [
+        23,
+        69,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：有人在研究一个严肃问题：长了爱心以后，逃跑技术会不会跟着进步？",
+      "ClueB": "调查笔记 B：大多数人觉得黏糊糊的比赛有点怪，她却像发现了新的冒险。可疑，但很适合加入调查。",
+      "Observation": ""
+    },
+    {
+      "Id": "sam",
+      "Name": "山姆",
+      "Npc": "Sam",
+      "Area": [
+        33,
+        70,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一位人类预言，一个宣称不爱热闹的人最终还是会来。地球人的嘴和脚经常意见不一致。",
+      "ClueB": "调查笔记 B：他似乎很了解那位朋友，甚至愿意为这个预言下注。也许友情就是一种准确的天气预报。",
+      "Observation": ""
+    },
+    {
+      "Id": "penny",
+      "Name": "潘妮",
+      "Npc": "Penny",
+      "Area": [
+        25,
+        70,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：今天我采访到一个反对追赶时间的人。她认为逛得慢一点，反而不会错过今天。",
+      "ClueB": "调查笔记 B：她的建议里没有奖励、比分或截止时间。听她说完，我决定先把调查本合上一小会儿。",
+      "Observation": ""
+    },
+    {
+      "Id": "marnie",
+      "Name": "玛妮",
+      "Npc": "Marnie",
+      "Area": [
+        21,
+        74,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：有人提前给一个红色的大个子留了住处。它不用床，倒是很需要一块宽敞的地。",
+      "ClueB": "调查笔记 B：她望着那个大个子，像在夸自己照顾长大的孩子。找照顾它的人，不要把孩子直接摘走。",
+      "Observation": ""
+    },
+    {
+      "Id": "george",
+      "Name": "乔治",
+      "Npc": "George",
+      "Area": [
+        26,
+        64,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：我遇到一位嘴上拒绝植物、手上却保护植物的人。人类语言和肢体似乎使用两套密码。",
+      "ClueB": "调查笔记 B：他坚持说自己只是替身边的人拿着。我怀疑花已经成功说服了他，只是他还没通知自己的嘴。",
+      "Observation": ""
+    },
+    {
+      "Id": "linus",
+      "Name": "莱纳斯",
+      "Npc": "Linus",
+      "Area": [
+        18,
+        58,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：有人没有提出要大房子，只问自己能不能在这里坐一会儿。他给“家”设定的条件非常轻。",
+      "ClueB": "调查笔记 B：在他看来，一朵花就能让一个地方变得亲切。我想把这个发现带回去，飞船的行李箱正好装得下。",
+      "Observation": ""
+    },
+    {
+      "Id": "jas",
+      "Name": "贾斯",
+      "Npc": "Jas",
+      "Area": [
+        24,
+        74,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：我发现一位从头到尾不偷吃的来宾，礼貌得不像人类。有人认真替它留好了甜点。",
+      "ClueB": "调查笔记 B：请找带它来参加聚会的小主人。那位不用吃饭的来宾，大概是用布和棉花做的。",
+      "Observation": ""
+    },
+    {
+      "Id": "vincent",
+      "Name": "文森特",
+      "Npc": "Vincent",
+      "Area": [
+        23,
+        67,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：有人提出，把两个甜点上下重叠，就可以消除其中一个的数量。听起来是很有前途的空间技术。",
+      "ClueB": "调查笔记 B：这项研究遭到了老师反对。我决定找那位年轻研究员聊聊，而不是直接把实验材料吃掉。",
+      "Observation": ""
+    },
+    {
+      "Id": "leo",
+      "Name": "雷欧",
+      "Npc": "Leo",
+      "Area": [
+        40,
+        74,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：有位来宾准备把聚会讲给会飞的家人听。我担心他们对糖霜和面粉的理解不太一样。",
+      "ClueB": "调查笔记 B：他的听众会先寻找蛋糕里的种子。要采访的是替鸟儿记住今天的那个孩子。",
+      "Observation": ""
+    },
+    {
+      "Id": "sandy",
+      "Name": "桑迪",
+      "Npc": "Sandy",
+      "Area": [
+        37,
+        57,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：为了一个邀请，有人提前在日历上画了圈。人类居然可以先把还没到来的日子珍藏起来。",
+      "ClueB": "调查笔记 B：她来自很少下雨的地方，却告诉我那里也会开花。她今天要见的好朋友就在服饰摊位里。",
+      "Observation": ""
+    },
+    {
+      "Id": "leah",
+      "Name": "莉亚",
+      "Npc": "Leah",
+      "Area": [
+        33,
+        73,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：两根不一样的树枝也能支起同一扇门。一位人类认为，配合比长得一样更有用。",
+      "ClueB": "调查笔记 B：她的眼睛似乎能在木头里看见还不存在的形状。这次找的是观察树枝的人，不是那座花拱。",
+      "Observation": ""
+    },
+    {
+      "Id": "maru",
+      "Name": "玛鲁",
+      "Npc": "Maru",
+      "Area": [
+        39,
+        57,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一项自动记录亲密动作的发明失败了，因为操作发明本身占用了进行亲密动作的双手。",
+      "ClueB": "调查笔记 B：发明者最后放下按钮。也许有些数据，直接记在心里比装进机器更快。",
+      "Observation": ""
+    },
+    {
+      "Id": "harvey",
+      "Name": "哈维",
+      "Npc": "Harvey",
+      "Area": [
+        33,
+        57,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一位来宾带了能处理意外的小箱子，但他希望今天最忙的是负责甜点的人。",
+      "ClueB": "调查笔记 B：他担心大家太开心会忘了自己的胃。听起来不是在阻止聚会，而是在准备照顾聚会。",
+      "Observation": ""
+    },
+    {
+      "Id": "clint",
+      "Name": "克林特",
+      "Npc": "Clint",
+      "Area": [
+        44,
+        61,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：有人能把坚硬的金属做成合适的圆圈，却不知道怎么测量要放进圆圈里的心意。",
+      "ClueB": "调查笔记 B：他的工具能量出戒指的尺寸，敲打声也很熟练。今天他还在修一种能让世界重新清楚起来的小圆窗。",
+      "Observation": ""
+    },
+    {
+      "Id": "jodi",
+      "Name": "乔迪",
+      "Npc": "Jodi",
+      "Area": [
+        20,
+        56,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一双终于不用准备饭菜的手，突然不知道应该放在哪里。另一位人类主动提供了位置。",
+      "ClueB": "调查笔记 B：她平时照顾家人，今天轮到有人牵着她。这份空出来的时间，好像就是一件礼物。",
+      "Observation": ""
+    },
+    {
+      "Id": "kent",
+      "Name": "肯特",
+      "Npc": "Kent",
+      "Area": [
+        23,
+        56,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：相同的热闹对不同人会发出不同声音。有个人先听见紧张，后来又从里面辨认出了安心。",
+      "ClueB": "调查笔记 B：改变声音的不是音量，而是家人的笑。我想找那位正在重新适应平静日子的来宾。",
+      "Observation": ""
+    },
+    {
+      "Id": "demetrius",
+      "Name": "德米特里厄斯",
+      "Npc": "Demetrius",
+      "Area": [
+        26,
+        54,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：某人的研究计划被另一位人类打断了。记录板离开了手，另一只手接替了它。",
+      "ClueB": "调查笔记 B：他本来要测量心跳，现在可以直接感受。邀请他跳过数据表的，是一位擅长木工的人。",
+      "Observation": ""
+    },
+    {
+      "Id": "elliott",
+      "Name": "艾利欧特",
+      "Npc": "Elliott",
+      "Area": [
+        44,
+        73,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一份长篇祝词被删了又删，最后只剩下对下一次见面的期待。越短，重量却好像越大。",
+      "ClueB": "调查笔记 B：那个人很擅长和文字打交道。我想请教他：为什么对明天的约定，也能成为今天的礼物？",
+      "Observation": ""
+    },
+    {
+      "Id": "shane",
+      "Name": "谢恩",
+      "Npc": "Shane",
+      "Area": [
+        46,
+        74,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一位照顾许多小动物的人，今天接到了一项更精细的保管任务。目标很轻，却不敢弄丢。",
+      "ClueB": "调查笔记 B：那是一条小姑娘交给他的蝴蝶结。我怀疑他在认真程度上，已经通过了这次地球调查。",
+      "Observation": ""
+    },
+    {
+      "Id": "pam",
+      "Name": "潘姆",
+      "Npc": "Pam",
+      "Area": [
+        44,
+        58,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：有人的杯子里少了一样平时喜欢的东西，回家的路上却会多出一个同行的人。",
+      "ClueB": "调查笔记 B：她为女儿换了今天的饮料。请找作出这个约定的人，不是寻找酒吧的菜单。",
+      "Observation": ""
+    },
+    {
+      "Id": "wizard",
+      "Name": "法师",
+      "Npc": "Wizard",
+      "Area": [
+        29,
+        78,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一个最懂魔法的人，竟然建议用每天留灯这种普通办法维系关系。是不是越高深的技术越简单？",
+      "ClueB": "调查笔记 B：他已经观察了很久。请找说出这个发现的人，别去调查池边那盏真的灯。",
+      "Observation": ""
+    },
+    {
+      "Id": "krobus",
+      "Name": "科罗布斯",
+      "Npc": "Krobus",
+      "Area": [
+        45,
+        80,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一位喜欢阴凉的来宾说，植物并不在意他的来处。这可能是地球花朵最先进的地方。",
+      "ClueB": "调查笔记 B：他的外表像一团温柔的影子。今天他发现，愿意接纳自己的不只有花。",
+      "Observation": ""
+    },
+    {
+      "Id": "dwarf",
+      "Name": "矮人",
+      "Npc": "Dwarf",
+      "Area": [
+        43,
+        81,
+        1,
+        1
+      ],
+      "ClueA": "调查笔记 A：一位来宾把漂亮的绳带当成了可能埋在地下的宝物，还认真提出用石头交换。",
+      "ClueB": "调查笔记 B：我猜他的购物经验主要来自矿洞。这次要找热爱岩石的小个子，不需要真的挥动镐子。",
+      "Observation": ""
+    }
+  ]
+}

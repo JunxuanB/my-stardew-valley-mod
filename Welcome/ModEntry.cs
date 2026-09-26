@@ -8,6 +8,7 @@ namespace Welcome;
 /// <summary>Shows one local welcome message for each entry into a world.</summary>
 public sealed class ModEntry : Mod
 {
+    private Anniversary.AnniversaryModule? anniversary;
     // Each split-screen player has their own pending message.
     private readonly PerScreen<bool> pendingWelcome = new();
 
@@ -30,6 +31,9 @@ public sealed class ModEntry : Mod
         helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
         helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
         helper.Events.GameLoop.ReturnedToTitle += (_, _) => pendingWelcome.Value = false;
+
+        anniversary = new Anniversary.AnniversaryModule(helper, Monitor);
+        anniversary.Register();
     }
 
     private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
